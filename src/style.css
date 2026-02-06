@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+#app {
+  width: 100%;
+  max-width: 480px;
+  padding: 0 20px;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ---- Lobby ---- */
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+#create-game-btn {
+  background: #e94560;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 32px;
+}
+
+#create-game-btn:hover {
+  background: #c73550;
+}
+
+#game-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-card {
+  background: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.game-card:hover {
+  border-color: #e94560;
+  background: #1a2847;
+}
+
+.game-card .game-id {
+  font-weight: 600;
+}
+
+.game-card .game-info {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ---- Game ---- */
+
+#game-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+#back-to-lobby-btn {
+  background: none;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+#back-to-lobby-btn:hover {
+  border-color: #e94560;
+  color: #fff;
+}
+
+#game-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+  width: 300px;
+  height: 300px;
+}
+
+.cell {
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  user-select: none;
+}
+
+.cell:hover {
+  background: #1a2847;
+  border-color: #e94560;
+}
+
+.cell.taken {
+  cursor: default;
+}
+
+.cell.taken:hover {
+  border-color: #0f3460;
+  background: #16213e;
+}
+
+.cell .x {
+  color: #e94560;
+}
+
+.cell .o {
+  color: #53d8fb;
+}
+
+.winner-banner {
+  margin-top: 24px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #0f3460;
+}

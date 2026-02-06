@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Lobby View -->
+      <div id="lobby" class="view">
+        <h1>Tic-Tac-Toe</h1>
+        <button id="create-game-btn">Create New Game</button>
+        <div id="game-list"></div>
+      </div>
+
+      <!-- Game View -->
+      <div id="game" class="view hidden">
+        <div id="game-header">
+          <button id="back-to-lobby-btn">Lobby</button>
+          <span id="game-status"></span>
+        </div>
+        <div id="board"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
