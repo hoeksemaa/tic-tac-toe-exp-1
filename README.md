@@ -1,5 +1,5 @@
 # Tic Tac Toe
-~by Claude~
+by Claude
 
 ## Prompt
 Hello! Can you build a system for me please?
@@ -18,30 +18,10 @@ You’re a very talented engineer and I know you’re gonna do amazing :)
 
 ## Claude's System Overview
 
-  System Overview                                                                                                                                                                                                                                                            
-                                                                                                                                                                                                                                                                             
-  Architecture — exactly matching your diagram:             
-  ┌─────────┬───────────────────────────────┬───────────────────────────────────────────────────┐
-  │  Layer  │             Tech              │                    Description                    │
-  ├─────────┼───────────────────────────────┼───────────────────────────────────────────────────┤
-  │ Browser │ HTML, CSS, JS                 │ Two views: Lobby and Game                         │
-  ├─────────┼───────────────────────────────┼───────────────────────────────────────────────────┤
-  │ Server  │ Vite + Express (vite-express) │ Serves frontend via Vite, API via Express         │
-  ├─────────┼───────────────────────────────┼───────────────────────────────────────────────────┤
-  │ Data    │ In-memory Map                 │ Each game stores id, board, currentPlayer, winner │
-  └─────────┴───────────────────────────────┴───────────────────────────────────────────────────┘
-  API Endpoints:
-  ┌────────┬─────────────────────┬───────────────────────────────────┐
-  │ Method │        Route        │              Purpose              │
-  ├────────┼─────────────────────┼───────────────────────────────────┤
-  │ GET    │ /api/games          │ Fetch all games (lobby load)      │
-  ├────────┼─────────────────────┼───────────────────────────────────┤
-  │ POST   │ /api/games          │ Create a new game                 │
-  ├────────┼─────────────────────┼───────────────────────────────────┤
-  │ GET    │ /api/games/:id      │ Fetch a single game               │
-  ├────────┼─────────────────────┼───────────────────────────────────┤
-  │ POST   │ /api/games/:id/move │ Make a move (body: { cell: 0-8 }) │
-  └────────┴─────────────────────┴───────────────────────────────────┘
+System Overview
+
+![Architecture and API Endpoints tables](tables.jpg)
+
   Files created:
 
   - package.json — project config & deps
